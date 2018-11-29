@@ -34,10 +34,27 @@ print(age)
 print(type(2))
 
 print('hello' + 'world')
-print("Joke" * 3)
-#print("Chen" + 3) Error because you can't put int and str together in concat. convert int to string.2 fixes below. 
+print('Joke \n' * 3)
+#print("Chen" + 3) Error because you can't put int and str together in concat. convert int to string.potential fixes below. 
+print("Chen3")
 print("Chen" + "3")
 print("Chen" + str(3))
 print('hello'.upper())
+print()
 print('GOODBYE'.lower())
+print('\n')
 print('the lord of the rings'.title())
+print()
+
+S1 = 'hello' + 'world'
+S2 = 'Joke '*3
+S3 = 5
+result = S1 + S2*10
+print(result)
+print()
+
+s1 = '4'
+s2 = 6
+s3 = 8
+result2 = int(s1) + s2 + s3
+print(result2)
