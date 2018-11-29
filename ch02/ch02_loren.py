@@ -58,3 +58,19 @@ s2 = 6
 s3 = 8
 result2 = int(s1) + s2 + s3
 print(result2)
+print()
+
+strExample = 'a,b-b,d,happy'
+print(strExample)
+splitStrExample = strExample.split()
+print(splitStrExample)
+
+
+age = 'fun'
+like = 5
+
+me = 'I am {} and I like {}'.format(age,like)
+print(me)
+age = 6.5
+me = 'I am {} and I like {}'.format(age,like)
+print(me)
