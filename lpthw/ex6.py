@@ -17,3 +17,5 @@ joke_evaluation = "Isn't that joke so funny?!"
 l = "this is the left side of "
 r = "a joke with a right side."
 print( l + r)
+
+print()
