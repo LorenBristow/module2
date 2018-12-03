@@ -21,7 +21,7 @@ print(num)
 #example 1 - NB lesson = the loop ignores/overwrites earlier binding of var num
 #
 print("example 1\n")
-num = 10
+num = 10 # this is ignored in the for
 for num in range(5):
     print(num)
 print(num)
@@ -34,3 +34,15 @@ for num in range(0, 10, 2):
                         # in P3 every division yields a float whether inputs were float or int. 
                         #in P2 3/2 = 1 (assumes int in want int out.) 
                         #to get float you would have had to do 3.0/2 = 1.5. 
+                        
+                        
+for letter in 'hola':
+    print(letter, end=",")    #cycles through each letter                        
+                        
+    
+count = 0
+for letter in 'Snow!':
+    print('Letter # ' + str(count) + ' is ' + str(letter))
+    count += 1
+    break #kicks out of for loop on first iteration. 
+print(count)
