@@ -6,19 +6,48 @@ Created on Mon Dec  3 14:33:17 2018
 """
 
 import random
-
-seating = ["Hien", "Loren", "Iza","Seraphine", "Ottilie", "Muna", "Sarika", "Rachel",\
+####
+print()
+###CURRENT SEATING
+print("The current seating:\n".upper())
+current_seating = ["Hien", "Loren", "Iza","Seraphine", "Ottilie", "Muna", "Sarika", "Rachel",\
            "Katharina", "Ellen", "Kirsty", "Kate", "Leanne", "Milly", "Maggie", "Amina",\
            "Gracy", "Mabel", "Jennifer", "Mandy", "Harriet", "Tilly","Roxy", "Aminat","Mari",\
            "Pam", "Fabiana", "Amanda", "Martina"]
-random.shuffle(seating)
-print(seating)
+print(current_seating)
 print()
-for n in range(0,16,4):
-    print(seating[n:n+4])
-    print()
-for n in range(16,19):
-    print(seating[n:n+3])    
-#for n in range(0,30,4):
-#    print(seating[n:n+4])
-# 
+
+###CURRENT SEATING PAIRS(NEIGHBOURS)
+print("Pairs of current neighbours:\n".upper()) #based on original seating
+for n in range(28):
+    current_neighbours = str(current_seating[n]) + str(current_seating[n+1])
+    print(current_neighbours, end=", ")
+random.shuffle(current_seating)
+print() 
+print()
+
+###RANDOM SEATING
+print("The randomly shuffled seating:\n".upper())
+print(current_seating)
+print()
+
+###RANDOM SEATING PAIRS(NEW NEIGHBOURS)
+print("Neighbours in shuffled seating:\n".upper()) #based on shuffled seating
+for n in range(28):
+    new_neighbours = str(current_seating[n]) + str(current_seating[n+1])
+    print(new_neighbours, end=", ")
+print()  
+print()
+#print("The randomly shuffled seating separated into desk banks of 3 and 4:\n".upper())
+#
+#for n in range(0,20,4): #5 rows of 4 people
+#    print("Bank of 4 desks: ", seating[n:n+4])
+#for n in range(20,29,3): #3 rows of 3 people
+#    print("Bank of 3 desks: ",seating[n:n+3])   
+#print()
+#
+##problems:
+##some people sat at ends i.e did not actually sit next to neighbour in the list
+##people may want to change direction? C
+##HeinLoren not seen as same as LorenHein so need to create an expanded list 
+##

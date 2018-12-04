@@ -6,7 +6,7 @@ Created on Thu Nov 29 16:30:17 2018
 """
 
 
-measureType = input("km or m?")
+
 
 def convertMilesToKilometers():
     kilometersRunByUser = round(float(input("How many miles did you run?")) * 1.6)
@@ -21,9 +21,7 @@ def whichMeasure():
         convertKilometersMiles()
     else: convertMilesToKilometers()
     
-    
 
-whichMeasure()
 
 #other practice
 #def addsTwoNumbersTogether():
