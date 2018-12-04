@@ -5,16 +5,16 @@ Created on Tue Dec  4 13:58:56 2018
 @author: loren
 """
 
-age = 14, 20
-
-if age < 13:
-    print("Child")
-elif age <= 19:
-    print("Teen")
-elif age <= 65:
-    print("Adult")
-else:
-    print("Pensioner")
+age_list = [14, 20, 68]
+for age in age_list:
+    if age < 13:
+        print("Child")
+    elif age <= 19:
+        print("Teen")
+    elif age <= 65:
+        print("Adult")
+    else:
+        print("Pensioner")
 
 ####
 
