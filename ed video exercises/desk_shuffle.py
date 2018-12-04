@@ -55,3 +55,6 @@ print()
 #    print("Bank of 3 desks: ",seating[n:n+3])   
 #print()
 #
+
+current_neighbour_pairs_sorted = sorted(word,current_neighbour_pairs)
+print(current_neighbour_pairs_sorted)
