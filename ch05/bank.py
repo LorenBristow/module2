@@ -6,7 +6,7 @@ Created on Wed Dec  5 10:08:21 2018
 """
 
 
-class Customer(object):
+class Customer():
 
 #"""A customer of ABC Bank with a checking account. Customers have the following properties:
 #Attributes:
@@ -14,7 +14,7 @@ class Customer(object):
 #balance: A float tracking the current balance of the customer's account."""
 
 #"""Return a Customer object whose name is *name* and starting balance is *balance*."""
-    def __init__(self, name,  has_overdraft=False, balance=0.00,):
+    def __init__(self, name,  has_overdraft=False, balance=0.00):
         self.name = name
         self.balance = balance
         self.has_overdraft = has_overdraft
@@ -26,6 +26,7 @@ class Customer(object):
             if self.has_overdraft == False:
                 print("You don't have an overdraft available so you cannot draw this amount. Please withdraw an amount which is equal to or smaller than your available balance of £\n", self.balance,"\n")
                 does_customer_want_overdraft = input("Would you like to apply for an overdraft? \n  Please respond 'y' for yes or 'n' for no.\n")            
+               #need to remember that naming variable of input to something other than input was important to this actually working. 
                 if does_customer_want_overdraft == 'y':
                     print("Thank you for your application for an overdraft. We will be in touch soon.\n")
                 else:
