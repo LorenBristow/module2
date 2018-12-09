@@ -53,8 +53,6 @@ class SuperRobot():
 
     def __str__(self):
         return (self.o2.name)
-
-name = Dog(name)
-print(name)
+)
 
 

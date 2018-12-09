@@ -6,5 +6,7 @@ Created on Mon Dec  3 16:23:10 2018
 """
 
 from my_arguments import *
-measureType = input("km or m?")
+
+input("Did you measure your run in km or m?")
+
 whichMeasure()

@@ -6,8 +6,6 @@ Created on Thu Nov 29 16:30:17 2018
 """
 
 
-
-
 def convertMilesToKilometers():
     kilometersRunByUser = round(float(input("How many miles did you run?")) * 1.6)
     print("Well done! That means you ran " + str(kilometersRunByUser) +" kilometers!")
@@ -17,7 +15,7 @@ def convertKilometersMiles():
     print("Well done! That means you ran " + str(milesRunByUser) + " miles!")
 
 def whichMeasure():
-    if measureType == "km":
+    if input == "km":
         convertKilometersMiles()
     else: convertMilesToKilometers()
     
