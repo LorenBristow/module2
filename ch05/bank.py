@@ -55,6 +55,7 @@ Joke = Customer("Joke De Winter", False, 1000) # This is an instance of the clas
 #Loren.withdraw(700)
 print(Joke)
 
+
 #make another role - eg bank worker also with attributes
 
 
