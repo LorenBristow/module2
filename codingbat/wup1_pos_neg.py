@@ -17,3 +17,10 @@ def pos_neg(a, b, negative):
     return False
 
 
+#codingbat solution - i would say not as explicit as code should be. 
+#understand it but disagree with style. 
+#def pos_neg(a, b, negative):
+#  if negative:
+#    return (a < 0 and b < 0)
+#  else:
+#    return ((a < 0 and b > 0) or (a > 0 and b < 0))
