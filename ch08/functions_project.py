@@ -9,25 +9,28 @@ availableCredit = 32
 
 #function to verify passcode
 def checkPasscode(passcodeProvided):
-    if passcodeProvided == passcodeOnRecord:
-        return True    
-    else: #final exit until we give reattempts or reset or retrieval. 
-        return False
+    attemptsCounter = 1   #what about memory of previous visit - should be blocked forever. 
+    while attemptsCounter < 3:
+        if passcodeProvided == passcodeOnRecord:
+            return True    
+        else: 
+            print("The passcode you have entered is incorrect. You have {} remaining attempts.\nWhat is your passcode?".format(3 - attemptsCounter))
+            passcodeProvided = input()
+            attemptsCounter += 1  
+            
     
 def checkCredit(availableCredit):
     dataValueRequested = int(input())
-    roundToFive(dataValueRequested)  
+    print(dataValueRequested, "before round test") # test
+    dataValueRequested = dataValueRequested + (5 - (dataValueRequested % 5))  
+    print(dataValueRequested, "after round test") #test
     if dataValueRequested <= availableCredit:
         availableCredit = availableCredit - dataValueRequested
-        print("Thank you for your purchase. Your new data has been loaded and your available credit is now £{}".format(availableCredit))
+        print("Thank you for your purchase. Your new data has been loaded and your available credit is now £{}.".format(availableCredit))
     else:
         print("You have insufficent available credit to make a purchase of this value. Go away.")
  
-def roundToFive(dataValueRequested): 
-    if dataValueRequested % 5 != 0:
-        dataValueRequested = dataValueRequested + (5 - (dataValueRequested % 5))  
-        return dataValueRequested
-    else:
-        return DataValueRequested
-    
+#def roundToFive(dataValueRequested): 
+#    dataValueRequested = dataValueRequested + (5 - (dataValueRequested % 5))  
+#    return dataValueRequested 
     
