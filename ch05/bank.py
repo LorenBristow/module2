@@ -4,11 +4,11 @@ Created on Wed Dec  5 10:08:21 2018
 
 @author: loren
 """
-
+#correct withdrawl to withdrawAl
 from bank_functions import *
 print("WELCOME TO THE BAD BAD BANK\nWHERE GETTING WHAT YOU ASK FOR IS GETTING WHAT YOU PAY FOR...\nand you pay close to nothing.\n" )
 # sucker# = Customer("name", bool_hasoverdraft, bal)
-sucker = Customer(input("Who goes there?!\n").title(), False, 0) # only works for new customers. need logic for existing to not lose history.
+sucker = Customer(input("Who goes there?!\n").title(), False, 500) # only works for new customers. need logic for existing to not lose history.
 print(sucker)
 print("What would you like to do today?\n1. Make a withdrawl.\n2. Make a deposit.")
 customerActivityChosen = int(input())

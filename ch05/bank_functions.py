@@ -5,7 +5,7 @@ Created on Wed Dec 12 10:15:53 2018
 @author: loren
 """
 import random
-
+#need to rewrite cleaner using sub-routines. 
 class Customer():
 #"""Return a Customer object whose name is *name* and starting balance is *balance*."""
     def __init__(self, name,  has_overdraft=False, balance=0.00):
@@ -67,3 +67,20 @@ class Employee():
         self.name = name
         self.chosen_misdeed = chosen_misdeed
         self.leave_balance = leave_balance    
+        
+        
+import pandas as pd
+
+# Create a Pandas dataframe from the data.
+df = pd.DataFrame({'Data': [10, 20, 30, 20, 15, 30, 45]})
+
+# Create a Pandas Excel writer using XlsxWriter as the engine.
+writer = pd.ExcelWriter('badbadbank_customerRecords.xlsx', engine='xlsxwriter')
+
+# Convert the dataframe to an XlsxWriter Excel object.
+df.to_excel(writer, sheet_name='customerRecords')
+
+# Close the Pandas Excel writer and output the Excel file.
+writer.save()        
+        
+        
