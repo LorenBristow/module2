@@ -11,8 +11,8 @@ class Customer():
     def __init__(self, name,  has_overdraft=False, balance=0.00):
         self.name = name
         self.balance = balance
-        self.has_overdraft = has_overdraft
-        
+        self.has_overdraft = has_overdraft   
+                
 #"""Return the balance remaining after withdrawing *amount* dollars."""        
     def withdraw(self, withdrawl_amount):
         withdrawl_amount = int(withdrawl_amount)
@@ -30,11 +30,12 @@ class Customer():
                     print("Wait for it....")
                     print("Wait for it....")
                     print("Wait for it....")
-                    choice_overdraft = [True, False]
-                    choice_overdraft = random.choice(choice_overdraft)
+                    choice_overdraft_list = [True, False]
+                    choice_overdraft = random.choice(choice_overdraft_list)
+                    print(choice_overdraft)
                     if choice_overdraft == True:
                         print("Congratulations, your application is successful and you are now free to weigh yourself down in debt to your heart's delight <3!\n")
-                    elif random.choice == False:
+                    elif choice_overdraft == False:
                         print("Unfortunately your application is denied based on a random 50/50 decision. Goodbye.")
                 else:
                     "Thank you for your response. Please contact us should you change your mind.\n"
@@ -60,4 +61,9 @@ class Customer():
         return ("CUSTOMER ACCOUNT STATUS:\n  Customer " + self.name + " has a balance of £" + str(self.balance) + ".\n  Overdraft Indicator: " + str(self.has_overdraft) + ".\n\n" )
 #Note - Nothing marks the end of the class block. It's all about indentation.  
         
-    
+class Employee():
+#"""Return a Customer object whose name is *name* and starting balance is *balance*."""
+    def __init__(self, name, chosen_misdeed, leave_balance=20):
+        self.name = name
+        self.chosen_misdeed = chosen_misdeed
+        self.leave_balance = leave_balance    
