@@ -21,10 +21,10 @@ def checkPasscode(passcodeProvided):
 def checkCredit(availableCredit):
     dataValueRequested = int(input())
     print(dataValueRequested, "before round test") # test
-    dataValueRequested = dataValueRequested + (5 - (dataValueRequested % 5))  
+    dataValueRequested_multipleOf5 = dataValueRequested + (5 - (dataValueRequested % 5))  
     print(dataValueRequested, "after round test") #test
-    if dataValueRequested <= availableCredit:
-        availableCredit = availableCredit - dataValueRequested
+    if dataValueRequested_multipleOf5 <= availableCredit:
+        availableCredit = availableCredit - dataValueRequested_multipleOf5
         print("Thank you for your purchase. Your new data has been loaded and your available credit is now £{}.".format(availableCredit))
     else:
         print("You have insufficent available credit to make a purchase of this value. Go away.")
