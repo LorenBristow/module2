@@ -16,9 +16,9 @@ passcodeProvided = input() #maybe make invisible/masked?
 if checkPasscode(passcodeProvided) == True:
     print("Thank you. The passcode provided is correct. Indicate what you would like to do by entering the number?\n 1. Check your available credit.\n 2. Purchase a data bundle.") # # #her's where all the action happens. 
     whichOption = int(input())  #need to restrict to single number only - 1 or 2. 
-    if whichOption == 1:
+    if whichOption == 1: #check balance
         print("You have £{} credit available.".format(availableCredit)) #another what would you like to do step?
-    elif whichOption == 2:
+    elif whichOption == 2: # buy data
         print("How much data would you like to purchase in £?\nNote that purchases can only be made in multiples of 5 and your entry will be rounded up to meet this criteria.")
         checkCredit(availableCredit)
     else:

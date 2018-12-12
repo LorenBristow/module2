@@ -16,8 +16,7 @@ def checkPasscode(passcodeProvided):
         else: 
             print("The passcode you have entered is incorrect. You have {} remaining attempts.\nWhat is your passcode?".format(3 - attemptsCounter))
             passcodeProvided = input()
-            attemptsCounter += 1  
-            
+            attemptsCounter += 1        
     
 def checkCredit(availableCredit):
     dataValueRequested = int(input())
