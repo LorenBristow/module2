@@ -9,11 +9,11 @@ my_favourite_fruits = ["apples", "orange", "banana"]
 #print(my_favourite_fruits[0])  ##list runs from position 0(index position) to position (n-1). Thus -1 returns last item on the list. 
 
 x = ["this", 55, "that", my_favourite_fruits]
-#print(x[3])
-#
-#print(x[-1][-3]) #each item is an ordered array so can drill into them. 
-#print(x[-2][-3]) #drilling into the letters in 'that' at position -2, -3. 
-#print(x[2][1])
+print(x[3])
+
+print(x[-1][-3]) #each item is an ordered array so can drill into them. 
+print(x[-2][-3]) #drilling into the letters in 'that' at position -2, -3. 
+print(x[2][1])
 
 
 print(x)
@@ -116,7 +116,7 @@ print(mabels_doof)
 print(mabels_food)
 
 
-mabels_snep = ['orange pen', 'multi-coloured pen', 'prockey pen', 'pink pen', 'some other pen']
+mabels_snep = ['orange pen','pink pen', 'multi-coloured pen','pink pen', 'prockey pen', 'pink pen', 'some other pen']
 print(mabels_snep)
 
 #mabels_pens = mabels_snep
@@ -124,4 +124,19 @@ mabels_snep.sort() #changes the existing list, no copy created
 print(mabels_snep)
 #print(mabels_pens)
 
+
+#DELETING & REMOVING IN LISTS - - - .remove() , del , .pop()
+mabels_snep.remove('orange pen') # removes first matching named item from the list, can't take an index
+print(mabels_snep)
+
+del mabels_snep[-2]
+print(mabels_snep)
+
+print(type(mabels_snep))
+mabels_snep.pop(1) 
+print(mabels_snep)
+
+test = [1,2,3,4,5]
+test.pop(1)
+print(test)
 

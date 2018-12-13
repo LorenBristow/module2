@@ -27,3 +27,7 @@ print(a)
 
 #b.append('loren') # errror can't change a tuple! immutable
 print(b)
+
+#can cast list to tuple and tuple to list. useful when needing to change tuple. 
+#make it a list, change, then put back to tuple where secure. 
+#note - can't use if/else to test tuple
