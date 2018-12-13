@@ -97,6 +97,31 @@ print(type(a))
 print(x)
 print(x[1:4])
 print(x[3:6])
-print(x[-3]) # slicing using neg appears to only be able to take 1 position, not a range.
+print(x[-1:0]) #there's nowhere to go from -1. it is the final position
 print(x[-3:-1]) #note - doesn't mean read backwards. just indicating where to start and then continues froward from there. 
 print(x[0:0])
+
+#sorting a list
+#2 ways - sorted() which makes copy and retunrs copy sprted. 
+#.sort() is list-class specific method and changes the original list in it's place. Alters list. 
+
+mabels_doof = ['pear', 'apple', 'banana', 'naartjie']
+print(mabels_doof)
+mabels_food = sorted(mabels_doof)
+#sorted(mabels_doof)
+print(mabels_doof) # unchanged by the sort action.
+print(mabels_food) #makes alphabetical
+mabels_food = sorted(mabels_doof, reverse=True)
+print(mabels_doof)
+print(mabels_food)
+
+
+mabels_snep = ['orange pen', 'multi-coloured pen', 'prockey pen', 'pink pen', 'some other pen']
+print(mabels_snep)
+
+#mabels_pens = mabels_snep
+mabels_snep.sort() #changes the existing list, no copy created
+print(mabels_snep)
+#print(mabels_pens)
+
+
