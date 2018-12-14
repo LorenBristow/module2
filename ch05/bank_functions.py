@@ -4,7 +4,12 @@ Created on Wed Dec 12 10:15:53 2018
 
 @author: loren
 """
+
+import xlwt 
+from xlwt import Workbook 
+
 import random
+
 #need to rewrite cleaner using sub-routines. 
 class Customer():
 #"""Return a Customer object whose name is *name* and starting balance is *balance*."""
@@ -68,19 +73,35 @@ class Employee():
         self.chosen_misdeed = chosen_misdeed
         self.leave_balance = leave_balance    
         
-        
-import pandas as pd
+# Workbook is created 
+wb = Workbook() 
+  
+# add_sheet is used to create sheet. 
+#sheet1 = wb.add_sheet('Customer') 
+#  
+#sheet1.write(0, 0, 'customerName') 
+#sheet1.write(0, 1, 'has_overdraft') 
+#sheet1.write(0, 2, 'balance') 
+#  
+#wb.save('badBadBankRecords.xls')     
 
-# Create a Pandas dataframe from the data.
-df = pd.DataFrame({'Data': [10, 20, 30, 20, 15, 30, 45]})
+def write_excel():
+    filename = "python_excel_test.xls"
+    excel_file = xlwt.Workbook()
+    sheet = excel_file.add_sheet('2016')
+    row = 0
+    col = 0
+    ctype = 'string'
+    value = 'Rocky1'
+    xf = 0
+    sheet.write(row, col, value)
 
-# Create a Pandas Excel writer using XlsxWriter as the engine.
-writer = pd.ExcelWriter('badbadbank_customerRecords.xlsx', engine='xlsxwriter')
+    sheet2 = excel_file.add_sheet('2017')
+    row = 0
+    col = 0
+    ctype = 'string'
+    value = 'Rocky122'
+    xf = 0
+    sheet2.write(row, col, value)
 
-# Convert the dataframe to an XlsxWriter Excel object.
-df.to_excel(writer, sheet_name='customerRecords')
-
-# Close the Pandas Excel writer and output the Excel file.
-writer.save()        
-        
-        
+write_excel(3)
