@@ -84,7 +84,7 @@ print(lucky_values)
 
 print(sorted(lucky.items(), key=lambda kv:kv[0])) #sorts by key
 print(sorted(lucky.items(), key=lambda kv:kv[1])) # sorts on first part of the list within each tuple
-print(sorted(lucky.items(), key=lambda kv:kv[1][1])) # sorts by second part of the list within each tuple
+print('kv', sorted(lucky.items(), key=lambda kv:kv[1][1])) # sorts by second part of the list within each tuple. 
 
 
 print()
@@ -100,6 +100,37 @@ abc_keys.sort(key=lambda k:abc[k][1])  #going by months
 print(abc_keys)
 abc_keys.sort(key=lambda k:abc[k][2])  #going by months
 print(abc_keys)
+print(sorted(abc.items(), key=lambda kv:kv[1])) # .items makes dictionary a tuple
+print(sorted(abc.items(), key=lambda kv:kv[1][2]))
+print(sorted(abc.keys(), reverse=True))
+
+print()
+
+for i in abc.items(): # more effcient ito memory
+    print(i)
+print()
+
+for i in abc: # less effcient ito memory
+    print(i, abc[i])  
+    
+print()
+   
+print("METALS EXAMPLE")
+densities = {1:("iron",7.8, 10, 50), 2:("gold", 19.3, 1000, 10),3:( "zinc", 7.13, 500, 30), 4: ("lead", 11.4, 5, 20)}
+print(densities)
+metals = list(densities.keys())
+print(metals)
+metals.sort(reverse=True, key=lambda m:densities[m]) #will show sorted key based on density values. 
+print('p',metals)
+print(sorted(densities.items(), key=lambda kv: kv[0]))
+print(sorted(densities.items(), key=lambda kv: kv[0], reverse=True))
+print(sorted(densities.items(), key=lambda kv:kv[1][1], reverse=True))
+metals.sort(reverse=True, key=lambda m:densities[m]) #metals list is keys only .keys()
+print(metals)
+metals_values = list(densities.values()) # values only, no keys .values()
+print(metals_values)
+metals_kv = list(densities.items()) #key value pairs .items
+print(metals_kv)
 
 #''' ON ORDERING IN DICT - ORDER OF ENTRY
 #accepted
