@@ -21,25 +21,28 @@ def front_back(str):
 
 front_back("loren")
 
+def make10(a, b):
+   if (a + b) == 10 or (a == 10 or b == 10):
+       print("True")
+   else:
+       print("False")
+make10(10, 5)
+make10(6, 4)
+make10(10,10)
 
+## i kept getting this wrong  on submission -STUPID, had quotes around True and False. 
 #def makes10(a, b):
-#    if ((a + b) == 10) or (a == 10 or b == 10):
-#        print("True")
-#    else:
-#        print("False")
-#makes10(10, 10)
-
-#def makes10(a, b):
-#  if ((a + b) == 10):
-#    print("true")
-#    return "True"
-#  elif (a == 10):
-#    print("true")  
-#    return "True"
-#  elif (b == 10):
-#    print("true")  
-#    return "True"
+#  if (a + b) == 10 or (a == 10 or b == 10):
+#    return True
 #  else:
-#    print("fasle")
-#    return "False"
-#makes10(10, 10)
+#    return False
+
+def not_string(str):
+  if (str[0:3] == "not"):
+      return not_string
+  else:
+      return "not" + str
+
+#not_string("notnow")
+#not_string("justnow")
+not_string("a")
