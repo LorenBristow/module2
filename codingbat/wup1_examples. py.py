@@ -46,3 +46,19 @@ def not_string(str):
 #not_string("notnow")
 #not_string("justnow")
 not_string("a")
+
+
+def no_teen_sum(a, b, c):
+  if a in  [13, 14, 17, 18, 19]:
+    fix_teen(a)
+  if b in  [13, 14, 17, 18, 19]:
+    fix_teen(b)
+  if c in  [13, 14, 17, 18, 19]:
+    fix_teen(c)
+  print(a+b+c)
+  return a + b + c
+
+def fix_teen(n):
+  n = 0
+  
+no_teen_sum(2, 4, 15)

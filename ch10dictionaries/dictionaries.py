@@ -16,7 +16,7 @@ salary["al"] = int(20000 *1.1)
 print(salary)
 salary[7] =("Joke", "Chen", "Bond") # just to show that key and value can 
 #be any data type and any number of them. NOTE! can't start number with 0!
-print(salary)
+print("R", salary)
 
 print(salary["bo"]) #getting values
 
@@ -28,6 +28,12 @@ phonenumbers["mabel"] = 913
 phonenumbers["amanda"] = 858
 phonenumbers["ottilie"] = 344
 print(phonenumbers)
+
+print(salary)
+
+
+
+
 
 digits = {"mabel": 3914, "amanda": 5858, "ottilie": 8344} # shorter way than phonenumbers above. 
 print(digits)
@@ -131,6 +137,10 @@ metals_values = list(densities.values()) # values only, no keys .values()
 print(metals_values)
 metals_kv = list(densities.items()) #key value pairs .items
 print(metals_kv)
+print()
+print(salary)
+sal_list = sorted(salary)
+
 
 #''' ON ORDERING IN DICT - ORDER OF ENTRY
 #accepted
