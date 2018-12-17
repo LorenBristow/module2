@@ -67,7 +67,7 @@ print(digits_keys[0]) # fetch out a specific key
   
 counts = {"a":3, "c":1, "b":5}
 labels = list(counts.keys())
-print(counts)
+print("ttt", counts)
 print(labels)
 
 labels.sort(key=lambda v:counts[v]) # puts labesl in asc order of count. 
@@ -137,9 +137,6 @@ metals_values = list(densities.values()) # values only, no keys .values()
 print(metals_values)
 metals_kv = list(densities.items()) #key value pairs .items
 print(metals_kv)
-print()
-print(salary)
-sal_list = sorted(salary)
 
 
 #''' ON ORDERING IN DICT - ORDER OF ENTRY
