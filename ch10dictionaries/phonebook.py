@@ -5,6 +5,7 @@ Created on Mon Dec 17 10:13:34 2018
 @author: loren
 """
 
+#phoneBook_dict = f.read()
 phoneBook_dict = {"loren": (264, 100, "AU2 7NW", "Guildford"), "xabel": (912, 8, "CX6 9YY", "America"), "nicole": (456, 90, "GX6 9YY", "Farfaraway"), "cody": (482, 9, "PX6 9YY", "Everywhere")}
 
 def update_phonebook():
@@ -57,7 +58,7 @@ print()
 #record = str(phoneBook_dict["loren"])
 #print(record)
 
-f = open("phonebook.txt", "w")
+f = open("phonebook.txt", "r+")
 f.write(str(sorted(phoneBook_dict.items())))
 f.close()
 
