@@ -44,21 +44,27 @@ def result(class_size,classResults):  # what is the best practice for exiting wh
             mark_given = 0
             #break
         elif mark_given >= 40:
+            student_result = "Pass"
+            classResults.update({student_name: (mark_given, student_result), })
             print("Pass, but there is room for improvement")    
             mark_given = 0
+            print(classResults)
             #break
         else: 
+            student_result = "Fail"
+            classResults.update({student_name: (mark_given, student_result), })
             print("Fail.")
             mark_given = 0
+            print(classResults)
             #break
+    f = open("{}.txt".format(className), "r+")
+    f.write(classResults)
+    f.close()
 
 className = input("What class are you inputting marks for?")
 class_size = int(input("How many students are in the class?")) 
 create_dictionary(className)
 
-
-f = open("classResults.txt".format(className), "r+")
-f.close()
 
 
 
