@@ -13,3 +13,4 @@ loren = user("Loren", 0)
 travis = user("Travis", 0)
 
 statementOfPosition()
+    
