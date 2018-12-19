@@ -4,6 +4,8 @@ Created on Wed Dec  5 10:08:21 2018
 
 @author: loren
 """
+
+###TASK 1
 #correct withdrawl to withdrawAl
 from bank_functions import *
 print("WELCOME TO THE BAD BAD BANK\nWHERE GETTING WHAT YOU ASK FOR IS GETTING WHAT YOU PAY FOR...\nand you pay close to nothing.\n" )
