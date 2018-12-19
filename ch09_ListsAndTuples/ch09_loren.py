@@ -1,35 +1,16 @@
 # -*- coding: utf-8 -*-
 """
+Created on Wed Dec 19 15:41:36 2018
+
+@author: loren
+"""
+
+# -*- coding: utf-8 -*-
+"""
 Created on Thu Dec 13 09:27:58 2018
 
 @author: loren
 """
-a = [0,1,2,3,4,5,6,7,8,9]
-print(a)
-del a[-1]
-print(a)
-
-b = (0,1,2,3,4,5,6,7,8,9,)
-print(b)
-#del b[-1] # error- can't remove things from a tuple 
-print(b)
-
-
-a[1] = 50 #adds value to the list at the position indiacted. overwrites.
-print(a)
-
-#b[1] = 50 # errror can't change a tuple! immutable
-print(b)
-
-a.append('loren')
-print(a)
-
-#b.append('loren') # errror can't change a tuple! immutable
-print(b)
-
-#can cast list to tuple and tuple to list. useful when needing to change tuple. 
-#make it a list, change, then put back to tuple where secure. 
-#note - can't use if/else to test tuple
 
 my_favourite_fruits = ["apples", "orange", "banana"]
 #print(my_favourite_fruits[0])  ##list runs from position 0(index position) to position (n-1). Thus -1 returns last item on the list. 
@@ -166,3 +147,18 @@ test = [1,2,3,4,5]
 test.pop(1)
 print(test)
 
+a = [0,1,2,3,4,5,6,7,8,9]
+b = (0,1,2,3,4,5,6,7,8,9)
+myFavF = ["apple", "orange", "banana"]
+x = ["xa", "sb", "lf", "hw", "ed", "fy"]
+z = ["fg", "uj", "sx", "uj", "ww", "cf"]
+y = sorted(x)
+
+#lambda is a placeholder for any operation. 
+# λx.x2 + 1 denotes the function x2 + 1.
+
+x2 = [('a', 3, z), ('c', 1, y), ('A', 5, x)]
+print(x2)
+print(sorted(x2))
+print(sorted(x2, key = lambda s: s[2][2])) #s:s parts of the compound data type
+print(sorted(x2, key = lambda s: s[2][1][1])) #final number is going into the string and looking at the 2nd position ie the 2nd letter

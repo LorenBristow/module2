@@ -4,9 +4,9 @@ Created on Tue Dec 11 08:10:05 2018
 
 @author: loren
 """
-#dummy passcode to check
+#dummy passcode to check - passcode is loren
 
-from functions_project import *
+from ch08_loren_functions_project import *
   
 #user to enter passcode for verification
 print("What is your passcode?\n")

@@ -5,8 +5,6 @@ Created on Wed Dec 12 10:15:53 2018
 @author: loren
 """
 
-import xlwt 
-from xlwt import Workbook 
 
 import random
 
@@ -66,42 +64,8 @@ class Customer():
         return ("CUSTOMER ACCOUNT STATUS:\n  Customer " + self.name + " has a balance of £" + str(self.balance) + ".\n  Overdraft Indicator: " + str(self.has_overdraft) + ".\n\n" )
 #Note - Nothing marks the end of the class block. It's all about indentation.  
         
-class Employee():
-#"""Return a Customer object whose name is *name* and starting balance is *balance*."""
-    def __init__(self, name, chosen_misdeed, leave_balance=20):
+class Employee(): 
+    def __init__(self, name, rights):
         self.name = name
-        self.chosen_misdeed = chosen_misdeed
-        self.leave_balance = leave_balance    
+        self.rights =  True
         
-# Workbook is created 
-wb = Workbook() 
-  
-# add_sheet is used to create sheet. 
-#sheet1 = wb.add_sheet('Customer') 
-#  
-#sheet1.write(0, 0, 'customerName') 
-#sheet1.write(0, 1, 'has_overdraft') 
-#sheet1.write(0, 2, 'balance') 
-#  
-#wb.save('badBadBankRecords.xls')     
-
-def write_excel():
-    filename = "python_excel_test.xls"
-    excel_file = xlwt.Workbook()
-    sheet = excel_file.add_sheet('2016')
-    row = 0
-    col = 0
-    ctype = 'string'
-    value = 'Rocky1'
-    xf = 0
-    sheet.write(row, col, value)
-
-    sheet2 = excel_file.add_sheet('2017')
-    row = 0
-    col = 0
-    ctype = 'string'
-    value = 'Rocky122'
-    xf = 0
-    sheet2.write(row, col, value)
-
-write_excel(3)

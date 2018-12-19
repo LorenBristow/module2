@@ -9,8 +9,7 @@ class Animal():
         print("yum")
 
 class Dog(Animal):
-    def bark(self, name):
-        name = input("Dog name?")
+    def bark(self):
         print("Woof!")
             
 class Cat(Animal):
@@ -32,8 +31,8 @@ class CookRobot(Robot):
 
 class SuperRobot():
     def __init__(self):
-        self.o1 = Robot()   #note - for some reason could not use a 0 here, had to use o for the numbers
-        self.o2 = Dog(name)
+        self.o1 = Robot()   #note - could not use a 0 here, had to use o for the numbers
+        self.o2 = Dog()
         self.o3 = CleanRobot()
   
     def playGame(self):
@@ -53,6 +52,12 @@ class SuperRobot():
 
     def __str__(self):
         return (self.o2.name)
-)
+
+olly = SuperRobot()
+olly.bark()  
+olly.move()
+olly.clean()
+atti = CookRobot()
+atti.cook()
 
 

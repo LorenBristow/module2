@@ -5,14 +5,14 @@ Created on Tue Dec 18 09:26:08 2018
 @author: loren
 """
 
-#x = 33
-#count = 0
-#while x >= 1:
-#    print(x, ":", end="")
-#    x = x/2
-#    count += 1
-#print(x)
-##print(count)
+x = 33
+count = 0
+while x >= 1:
+    print(x, ":", end="")
+    x = x/2
+    count += 1
+print(x)
+print(count)
 
 def gun(n):  #review this - not from a code perspective, from a maths persepctive. 
     trisum = 0
@@ -30,7 +30,6 @@ def create_dictionary(className):
         classResults = {}
         result(class_size,classResults)
         
-
 def result(class_size,classResults):  # what is the best practice for exiting while loop. Break not being optimal and not wanting to assign a fake value to a variable. 
     while class_size > 0:
         class_size -= 1

@@ -33,8 +33,6 @@ print(salary)
 
 
 
-
-
 digits = {"mabel": 3914, "amanda": 5858, "ottilie": 8344} # shorter way than phonenumbers above. 
 print(digits)
 digits["amanda"] +=1
@@ -42,7 +40,7 @@ print(digits)
 
 #delete a 'key value pair' 
 del digits["mabel"] # same as delete item in list. 'del' function is not Obj. oriented.
-print(digits)
+print("here",digits)
 
 print(digits.keys())
 print(digits.values())
