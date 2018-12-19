@@ -14,6 +14,7 @@ print(endOfDay)
 timeLeft = endOfDay - now
 print(timeLeft)
 timeNeededMinutes = 20 * 29
+print(timeNeededMinutes)
 timeLeftForExtract = str(timeLeft)
 print(timeLeft)
 timeLeftMinutes = int(timeLeftForExtract[0]) * 60 + int(str(timeLeftForExtract[2]+timeLeftForExtract[3]))
