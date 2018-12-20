@@ -135,15 +135,24 @@ inner_vals = ["A", "B", "C"]
 d = {}
 for o_val in outer_vals:
     for i_val in inner_vals:
-        print(o_val, i_val)
         d[o_val] = i_val
+        print(o_val, i_val)
 print(d)
+print()
+
 ##TASK 14 - MULTIPLICATION
 for i in range(1,7):
     for j in range(1,11):
         print("{0:>3}".format(i*j), end="")
     print("\n")
-       
+print()
+#extend example to 10 * 10 table
+for i in range(1,11):
+    for j in range(1,11):
+        print("{0:>10}".format(i*j), end="")
+    print("\n")     
+print()
+
 ###EXTRA EXAMPLE IN CLASS - CHRISTMAS WISHLIST
 #def buildMyChristmasList():
 #    christmasWishList = {1:("candy"), 2:("puppies"), 3:("piles of gold coin"), 4:("immovable property")}
