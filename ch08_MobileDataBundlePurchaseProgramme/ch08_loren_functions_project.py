@@ -19,7 +19,7 @@ def checkPasscode(passcodeProvided):
             attemptsCounter += 1        
     return passcodeOnRecord
     
-def checkCredit(availableCredit):
+def checkCredit(availableCredit): #note if user enters non-multiple of 5 the value is rounded about and then credit available checked before running. 
     dataValueRequested = int(input())
     print(dataValueRequested, "before round test") # test
     dataValueRequested_multipleOf5 = dataValueRequested + (5 - (dataValueRequested % 5))  
