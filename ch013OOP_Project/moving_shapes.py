@@ -13,22 +13,19 @@ class movingShape:
         self.shape = shape
         self.diameter = diameter
         self.figure = Shape(shape, diameter)
-        self.jitterbug = (0,0)
-        self.dancingqueen = (0,0)
-        self.footloose = (0,0)
-        self.dx = 200
-        self.dy = 200
-    
+        self.x = 0
+        self.y = 0
+        self.dx = 5
+        self.dy = 5
+        
     def goto(self, x, y):
         self.figure.goto(x,y)
         
     def moveTick(self):
-        x = 0
-        y = 0
-        self.goto(x + self.dx,y + self.dy)
-        self.goto(x + 2 * self.dx,y + 2 * self.dy)
-           
-            
+        self.goto(self.x + self.dx,self.y + self.dy)
+#        self.x = self.x + self.dx
+#        self.y = self.y + self.dy
+        
 class Square(movingShape):
     def __init__(self, frame, diameter):
         movingShape.__init__(self, frame, "square", diameter)
