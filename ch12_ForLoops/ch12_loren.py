@@ -136,7 +136,8 @@ d = {}
 for o_val in outer_vals:
     for i_val in inner_vals:
         d[o_val] = i_val
-        print(o_val, i_val)
+        #print(o_val, i_val)
+        print(d)
 print(d)
 print()
 
@@ -149,7 +150,7 @@ print()
 #extend example to 10 * 10 table
 for i in range(1,11):
     for j in range(1,11):
-        print("{0:>10}".format(i*j), end="")
+        print("{0:>5}".format(i*j), end="") #wierd notation gives the fixed spacing. 0 - no spacing. 
     print("\n")     
 print()
 
