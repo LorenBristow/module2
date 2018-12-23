@@ -7,14 +7,15 @@ Created on Tue Dec 18 15:26:19 2018
 
 from shapes import *
 from pylab import random as r
+import random
 
 class movingShape:
     def __init__(self, frame, shape, diameter):
         self.shape = shape
         self.diameter = diameter
         self.figure = Shape(shape, diameter)
-        self.x = 0
-        self.y = 0
+        self.x = random.randint(diameter/2, (frame.width - diameter/2))
+        self.y = r() * 800
         self.dx = 5 + 10 * r()
         self.dy = 5 + 10 * r()
         
@@ -22,7 +23,7 @@ class movingShape:
         self.figure.goto(x,y)
         
     def moveTick(self):
-        if r() < 0.4:
+        if r() < 0.5:
             self.goto(self.x - self.dx,self.y - self.dy)
             self.x = self.x - self.dx
             self.y = self.y - self.dy
@@ -34,19 +35,19 @@ class movingShape:
 class Square(movingShape):
     def __init__(self, frame, diameter):
         movingShape.__init__(self, frame, "square", diameter)
-        self.x =50
-        self.y = 50    
+        self.x = r() * 100
+        self.y = r() * 100    
         
 class Diamond(movingShape):
     def __init__(self, frame, diameter):
         movingShape.__init__(self, frame, "diamond", diameter)
-        self.x =100
-        self.y = 50
+        self.x = r() * 100
+        self.y = r() * 100
         
 class Circle(movingShape):
     def __init__(self, frame, diameter):
         movingShape.__init__(self, frame, "circle", diameter)
-        self.x =50
-        self.y = 200
+        self.x = r() * 100
+        self.y = r() * 100
         
         
