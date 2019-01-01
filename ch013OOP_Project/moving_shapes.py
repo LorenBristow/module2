@@ -15,7 +15,7 @@ class movingShape:
         self.diameter = diameter
         self.figure = Shape(shape, diameter)
         self.x = random.randint(diameter/2, (frame.width - diameter/2))
-        self.y = r() * 800
+        self.y = random.randint(diameter/2, (frame.width - diameter/2))
         self.dx = 5 + 10 * r()
         self.dy = 5 + 10 * r()
         
@@ -34,20 +34,14 @@ class movingShape:
         
 class Square(movingShape):
     def __init__(self, frame, diameter):
-        movingShape.__init__(self, frame, "square", diameter)
-        self.x = r() * 100
-        self.y = r() * 100    
+        movingShape.__init__(self, frame, "square", diameter)  
         
 class Diamond(movingShape):
     def __init__(self, frame, diameter):
         movingShape.__init__(self, frame, "diamond", diameter)
-        self.x = r() * 100
-        self.y = r() * 100
-        
+
 class Circle(movingShape):
     def __init__(self, frame, diameter):
         movingShape.__init__(self, frame, "circle", diameter)
-        self.x = r() * 100
-        self.y = r() * 100
-        
+      
         
