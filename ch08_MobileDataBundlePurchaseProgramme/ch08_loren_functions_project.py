@@ -14,10 +14,10 @@ def checkPasscode(passcodeProvided):
         if passcodeProvided == passcodeOnRecord:
             return True    
         else: 
-            print("The passcode you have entered is incorrect. You have {} remaining attempts.\nWhat is your passcode?".format(3 - attemptsCounter))
-            passcodeProvided = input()
+            #("The passcode you have entered is incorrect. You have {} remaining attempts.\nWhat is your passcode?".format(3 - attemptsCounter))
+            passcodeProvided = input("The passcode you have entered is incorrect. You have {} remaining attempts.\nWhat is your passcode?".format(3 - attemptsCounter))
             attemptsCounter += 1        
-    return passcodeOnRecord
+    return passcodeProvided
     
 def checkCredit(availableCredit): #note if user enters non-multiple of 5 the value is rounded about and then credit available checked before running. 
     dataValueRequested = int(input())
